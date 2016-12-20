@@ -1,6 +1,6 @@
 #!/bin/bash
 
-exts="c go py yaml js java sh"
+exts="c cc go py yaml js java sh"
 
 syntax() {
 	echo "src_search [path] <string>"
