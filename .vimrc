@@ -16,7 +16,7 @@ let g:syntastic_python_flake8_args = "--max-line-length=160"
 
 " c++ stuff
 let g:syntastic_cpp_compiler = 'clang++'
-let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
+let g:syntastic_cpp_compiler_options = ' -std=c++11'
 
 command To SyntasticToggleMode
 
