@@ -12,7 +12,7 @@ cp -v bin/src_search ~/bin/.
 cp -v .vimrc ~/.
 
 pushd .
-cd ~/.
+cd ~/. || exit -1
 
 # Pathogen
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
