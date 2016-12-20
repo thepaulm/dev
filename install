@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Check for deps
+if [ ! "$(which curl)" ]; then
+	echo "You need to 'apt-get install curl'"
+	exit -1
+fi
+
+# Local files
+mkdir ~/bin
+cp -v bin/src_search ~/bin/.
+cp -v .vimrc ~/.
+
+pushd .
+cd ~/.
+
+# Pathogen
+mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+      curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
+git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
+
+# Syntastic
+cd ~/.vim/bundle && \
+	git clone --depth=1 https://github.com/vim-syntastic/syntastic.git
+
+popd
