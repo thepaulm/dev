@@ -11,6 +11,7 @@ RUN apt-get -y install vim
 RUN apt-get -y install clang
 RUN apt-get -y install curl
 RUN apt-get -y install make
+RUN apt-get -y install ctags
 
 # Paulm setup
 RUN git clone https://github.com/thepaulm/dev
