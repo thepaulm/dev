@@ -10,6 +10,7 @@ RUN apt-get -y install man
 RUN apt-get -y install vim
 RUN apt-get -y install clang
 RUN apt-get -y install curl
+RUN apt-get -y install make
 
 # Paulm setup
 RUN git clone https://github.com/thepaulm/dev
