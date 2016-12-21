@@ -14,6 +14,7 @@ RUN apt-get -y install make
 RUN apt-get -y install ctags
 RUN apt-get -y install telnet
 RUN apt-get -y install lldb
+RUN apt-get -y install python-six
 
 # Paulm setup
 RUN git clone https://github.com/thepaulm/dev
