@@ -13,6 +13,7 @@ RUN apt-get -y install curl
 RUN apt-get -y install make
 RUN apt-get -y install ctags
 RUN apt-get -y install telnet
+RUN apt-get -y install lldb
 
 # Paulm setup
 RUN git clone https://github.com/thepaulm/dev
