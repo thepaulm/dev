@@ -24,4 +24,12 @@ git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
 cd ~/.vim/bundle && \
 	git clone --depth=1 https://github.com/vim-syntastic/syntastic.git
 
+# Shell
+shellstuff="alias ls='ls -F'
+export PATH=${PATH}:${HOME}/bin"
+
+echo "${shellstuff}" >> "${HOME}"/.profile
+echo "${shellstuff}" >> "${HOME}"/.bash_profile
+
+
 popd
