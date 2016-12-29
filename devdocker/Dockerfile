@@ -16,6 +16,12 @@ RUN apt-get -y install telnet
 RUN apt-get -y install lldb
 RUN apt-get -y install python-six
 
+# packages
+RUN apt-get -y install pkg-config
+RUN apt-get -y install dh-autoreconf
+RUN apt-get -y install libevent-dev
+RUN apt-get -y install libsystemd-dev
+
 # Paulm setup
 RUN git clone https://github.com/thepaulm/dev
 WORKDIR /root/dev
