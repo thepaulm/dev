@@ -1,0 +1,23 @@
+#!/bin/bash
+
+exts="h c cc go py yaml js java sh"
+
+syntax() {
+	echo "src_search [path] <string>"
+}
+if [ $# -lt 1 ]; then
+	syntax
+	exit 0
+fi
+
+where="."
+if [ $# -lt 2 ]; then
+	what=$1
+else
+	where=$1
+	what=$2
+fi
+
+for e in $exts; do
+	find "$where" -name vendor -prune -o -name "*.$e" -exec grep -iHn "$what" {} \;
+done
