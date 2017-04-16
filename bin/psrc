@@ -6,7 +6,8 @@ import importlib.util as ilu
 
 
 def main():
-    p = argparse.ArgumentParser(description="vim to the module path")
+    p = argparse.ArgumentParser(description="vim to the module path "
+                                            "(ctrl ^ (crtl shift 6) to return to directory listing)")
     p.add_argument('module', help="Module name")
     args = p.parse_args()
 
