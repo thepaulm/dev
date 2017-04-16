@@ -14,6 +14,7 @@ def main():
     try:
         path = '/'.join(ilu.find_spec(args.module).origin.split('/')[0:-1])
         subprocess.run(['vim', path])
+        print("cd", path)
     except:
         print("No module named", args.module)
 
