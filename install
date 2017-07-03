@@ -20,9 +20,13 @@ mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 
 git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
 
+# Autopep
+pip install autopep8
+
 # Syntastic
 cd ~/.vim/bundle && \
-	git clone --depth=1 https://github.com/vim-syntastic/syntastic.git
+	git clone --depth=1 https://github.com/vim-syntastic/syntastic.git && \
+	git clone https://github.com/tell-k/vim-autopep8.git
 
 # Shell
 shellstuff="alias ls='ls -F'
