@@ -25,7 +25,10 @@ pip install autopep8
 
 # Syntastic
 cd ~/.vim/bundle && \
-	git clone --depth=1 https://github.com/vim-syntastic/syntastic.git && \
+	git clone --depth=1 https://github.com/vim-syntastic/syntastic.git
+
+# vim autopep
+cd ~/.vim/bundle && \
 	git clone https://github.com/tell-k/vim-autopep8.git
 
 # Shell
