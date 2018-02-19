@@ -1,3 +1,3 @@
 #!/bin/bash
 
-ps -u paulm -opid,command
+ps -u "${USER}" -opid,command

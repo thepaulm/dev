@@ -1,0 +1,22 @@
+#!/usr/bin/env python
+
+import argparse
+import subprocess
+import importlib.util as ilu
+
+
+def main():
+    p = argparse.ArgumentParser(description="vim to the module path "
+                                            "(ctrl ^ (crtl shift 6) to return to directory listing)")
+    p.add_argument('module', help="Module name")
+    args = p.parse_args()
+
+    try:
+        path = '/'.join(ilu.find_spec(args.module).origin.split('/')[0:-1])
+        subprocess.run(['vim', path])
+        print("cd", path)
+    except:
+        print("No module named", args.module)
+
+if __name__ == '__main__':
+    main()
