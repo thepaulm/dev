@@ -20,7 +20,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_python_checkers = ['flake8']
 
 let g:syntastic_python_flake8_args = "--ignore=E501"
-let g:syntastic_python_flake8_args = "--max-line-length=160"
+let g:syntastic_python_flake8_args = "--max-line-length=120"
 let g:autopep8_disable_show_diff=1
 
 " c++ stuff
@@ -47,6 +47,7 @@ hi Special ctermfg=White
 
 au FileType python set expandtab
 au FileType cpp set expandtab
+au FileType javascript set expandtab
 au FileType go set noexpandtab
 au FileType yaml set expandtab shiftwidth=2 tabstop=2
 au BufNewFile,BufRead *.thrift set filetype=javascript
