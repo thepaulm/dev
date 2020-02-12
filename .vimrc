@@ -13,15 +13,16 @@ let g:go_highlight_build_constraints = 0
 let g:go_test_compile = 0
 
 " python stuff
-let g:syntastic_check_on_open = 1
+let g:black_linelength = 120
+" let g:syntastic_check_on_open = 1
 
 " let g:syntastic_python_checkers = ['flake8', 'mypy']
 " gd mypy is slooow
-let g:syntastic_python_checkers = ['flake8']
+" let g:syntastic_python_checkers = ['flake8']
 
-let g:syntastic_python_flake8_args = "--ignore=E501"
-let g:syntastic_python_flake8_args = "--max-line-length=120"
-let g:autopep8_disable_show_diff=1
+" let g:syntastic_python_flake8_args = "--ignore=E501"
+" let g:autopep8_disable_show_diff=1
+" let g:autopep8_max_line_length=120
 
 " c++ stuff
 " let g:syntastic_cpp_compiler = 'clang++'
@@ -36,6 +37,8 @@ filetype plugin indent on
 set tabstop=4
 set shiftwidth=4
 set ru
+set colorcolumn=120
+set background=light
 
 hi Comment ctermfg=Yellow
 hi Constant ctermfg=Yellow
@@ -51,5 +54,6 @@ au FileType javascript set expandtab
 au FileType go set noexpandtab
 au FileType yaml set expandtab shiftwidth=2 tabstop=2
 au BufNewFile,BufRead *.thrift set filetype=javascript
+autocmd BufWritePre *.py execute ':Black'
 
 set tags=./tags,tags;
